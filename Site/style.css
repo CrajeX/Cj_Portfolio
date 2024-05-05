@@ -1,0 +1,1031 @@
+
+
+@keyframes transitionIn
+{
+
+        from{
+            opacity: 0;
+            transform: rotateX(-40deg);
+        }
+        to{
+            opacity: 1;
+            transform: rotateX(0);
+        }
+}
+html{
+    scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+  background-size: cover; /* Cover the entire viewport */
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the background image */
+  animation: transitionIn 0.75s;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+body > *{
+  margin-top: 0;
+}
+h2 text{
+    font-size: large;
+}
+.image-container {
+    margin-bottom: 0.2px; /* Adjust as needed */
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+}
+.image-container img{
+    box-shadow:20px 30px 5px rgba(0, 0, 0, 0.5);
+
+}
+.navbar {
+    opacity: 60%;
+    text-align: right;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0px; /* Adjusted for margin of sections */
+    width: 100%;
+    z-index: 1000; /* Adjust z-index as needed */
+  }
+  
+        .navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+  }
+  .navbar:hover{
+    opacity: 100%;
+    border-radius: 30px;
+  }
+        .navbar a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: grid;
+    text-align: center;
+  }
+    .navbar a:hover{
+        background-color: rgb(29, 47, 47,0.2);
+        border-radius: 0px;
+    }
+    .navbar .h1:hover{
+      color: white;
+    }
+    .navbar li{
+        display: inline-block;
+    }
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: transitionIn 0.75s;
+      padding-top: 0 !important; /* Remove padding on top */
+  }
+  .central-container {
+    margin-top:500px ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: transitionIn 0.75s;
+    padding-top: 0 !important; /* Remove padding on top */
+}
+    
+.central-container .description {
+  display: none; /* Initially hide the description */
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  top: 60%; /* Position below the container */
+  left: 70%; /* Center horizontally */
+  width: 200px;
+  transform: translateX(-60%);
+  background-color: rgba(10, 10, 7, 0.395);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.central-container .description text{
+ text-align: center;
+}
+
+
+.central-container:hover .description {
+  display: block; /* Show the description when container is hovered */
+}
+  header.center-container {
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+      animation: transitionIn 0.75s;
+      margin-top: 0 !important; /* Remove margin on top */
+  }
+  
+  header.center-container > * {
+      margin-top: 0 !important; /* Remove margin on top for all direct children */
+  }
+  
+
+.text{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    filter: drop-shadow(10px 10px rgb(0,0,0,.2));
+    font-size: 100px;
+    margin-top: 0px;
+    color: white;
+}
+#text {
+  font-family: monospace;
+  font-size: 50px;
+  font-family:Centauri Font;
+  position: absolute;
+  color: white;
+  MARGIN-top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  scroll-behavior: smooth;
+  
+}
+#text1 {
+  font-family: monospace;
+  font-size: 100px;
+  font-family:Centauri Font;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  scroll-behavior: smooth;
+  color: white;
+}
+section{
+  overflow: hidden;
+}
+.section:first-child {
+  margin-top: 0; /* Remove margin for the first section */
+}
+#Skills{
+    height: 1000px; /* Set height for Section 1 */
+    /*background: linear-gradient(to bottom, #071a10, #a4d4f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url("space1.gif");
+    background-size:cover; /* Cover the entire viewport */
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    overflow: hidden;
+    margin-top: -20px;
+}
+#Skills::before{
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, #e6f5ff, #E0EAFC,transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 1000;
+  overflow: hidden;
+}
+#Home{
+    height: 1030px; /* Set height for Section 1 */
+    /*background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url('space.gif');
+    background-size:cover; /* Cover the entire viewport */
+    position: relative;
+    margin-top: -200px;
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the background image */
+    z-index: 1;
+    overflow: hidden;
+}
+#Home::before{
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #4677a8, #0f0c3d,transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 1000;
+  mix-blend-mode: multiply;
+  filter: blur(10%);
+}
+#Portfolio{
+  height: 1300px; /* Set height for Section 1 */
+  /*background: linear-gradient(to bottom, #eff3cf, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url('bg.jpg');
+
+  background-size:cover; /* Cover the entire viewport */
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the background image */
+  overflow: hidden;
+  margin-top: -20px;
+}
+#Resume{
+  height: 1000px; /* Set height for Section 1 */
+  /*background: linear-gradient(to bottom, #eff3cf, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ background-image: url('space.jpg');
+  background-size:cover; /* Cover the entire viewport */
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center; /* Center the background image */
+  overflow: hidden;
+  margin-top: -20px;
+}
+button {
+  background-color: rgb(233, 233, 235); /* Set background color */
+  color: rgb(0, 0, 0); /* Set text color */
+  border-radius: 10px; /* Set border radius */
+  padding: 20px 50px; /* Set padding */
+  border: none; /* Remove border */
+  cursor: pointer; /* Add pointer cursor on hover */
+  filter: drop-shadow(0px 0px 10px rgb(149, 245, 157));
+}
+.object-container{
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Adjust column size */
+  justify-items: center;
+  align-items: center;
+  justify-content:center;
+  grid-column-gap: 117px;
+  align-content: space-evenly;
+  margin-left: 10%;
+}
+.text2{
+    color: rgb(0, 0, 0); /* Text color */
+    font-family: monospace;
+    font-size: 50px;
+
+}
+
+.text-container{
+    display: grid;
+    grid-template-columns: repeat(1, auto); /* Adjust column size */
+    justify-items: center;
+    align-items: center;
+    justify-content:center;
+    grid-column-gap: 117px;
+    align-content: space-evenly;
+    
+}
+.text2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 2s steps(40) forwards, blink-caret 2s infinite;
+  }
+  .image2 {
+    position: absolute;
+    display: grid;
+    align-content: center;
+    height: 500px;
+    width: 500px;
+    margin-right: 100px; /* Adjust the positioning as needed */
+    left: 1000px;
+    z-index: 3;
+    /* Set appropriate styling for image1 */
+}
+.image1 {
+  position: absolute;
+  transform: rotateZ(90deg);
+  height: 500px;
+    width: 500px;
+  left: 1000px;
+  top: -500px;
+  z-index: 2;
+  filter: drop-shadow(10px 10px 100px rgb(224, 150, 39));
+  /* Set appropriate styling for image1 */
+}
+
+
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(19, 18, 15); }
+  }
+.card-container{
+    display: grid;
+    margin-top: 300px;
+    grid-template-columns: repeat(3, auto); /* Adjust column size */
+    justify-items: center;
+    align-items:center;
+    justify-content:center;
+    grid-column-gap: 117px;
+    align-content: space-between;
+
+}
+.card{
+    position: relative;
+    top: 20px;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.589);
+    border-radius: 50px;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.379);
+    transition: 0.5s;
+    
+}
+.card:hover{
+   height: 200px;
+   filter: drop-shadow(0px 10px 10px rgb(242, 255, 57));
+   justify-content: center;
+   
+}
+.card2{
+    position: relative;
+    height: 50px;
+    top: 20px;
+    background-color: rgba(255, 255, 255, 0.535);
+    border-radius: 5px;
+    box-shadow: 0px 20px 80px rgba(0, 0, 0, 0.379);
+    transition: 0.5s;
+}
+.card2:hover{
+    transform: translateY(-20px);
+}
+.card-container .card .imgbx1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center; /* This is for flexbox alignment if imgbx contains flex items */
+    opacity: 0%;
+    width: 100px;
+    height: 70px;
+    background-color: #00ddff;
+    border-radius: 10px;
+    transition: 0.5s;
+
+  }
+  
+  .card-container .card .imgbx2 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center; /* This is for flexbox alignment if imgbx contains flex items */
+    opacity: 0%;
+    width: 100px;
+    height: 70px;
+    background-color:#00ddff;
+    border-radius: 10px;
+    transition: 0.5s;
+
+  }
+  
+  .card-container .card .imgbx3 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center; /* This is for flexbox alignment if imgbx contains flex items */
+    opacity: 0%;
+    width: 200px;
+    height: 70px;
+    background-color:#00ddff;
+    border-radius: 20px;
+    transition: 0.5s;
+
+  }
+  
+.card-container .card:hover .imgbx1{
+    top:-200px;
+    opacity: 100%;
+    width: 100px;
+    height: 300px;
+}
+.card-container .card:hover .imgbx2{
+    top:-100px;
+    opacity: 100%;
+    width: 100px;
+    height: 200px;
+}
+.card-container .card:hover .imgbx3{
+    top:-300px;
+    opacity: 100%;
+    width: 100px;
+    height: 400px;
+}
+.card-container .card .imgbx1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-container .card .imgbx2 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-container .card .imgbx3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    overflow: hidden;
+}
+.card-container .card .content {
+    position: absolute;
+    top: 90px;
+    height: 50px;
+    padding: 0px 30px;
+    text-align: center;
+    overflow: hidden; /* Ensure content overflow is hidden */
+    font-family:monospace;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+  }
+  .logo-container{
+        display: grid;
+        margin-top: 50px;
+        grid-template-columns: repeat(3, auto); /* Adjust column size */
+        justify-items: center;
+        align-items:center;
+        justify-content:center;
+        grid-column-gap: 117px;
+        align-content: space-evenly;
+  }
+  .logo-container img{
+    display: inline-block;
+    background-color: rgba(236, 221, 221, 0.605);
+    padding: 20px;
+    border-radius: 20px;
+  }
+.logo-container img:hover{
+    transform: translateY(-20px);
+    filter: drop-shadow(0px 10px 10px rgb(242, 255, 57));
+    transition: ease-in-out;
+}
+.h1-container {
+    position: relative; /* Ensure absolute positioning is relative to this container */
+  }
+  
+  .h1-container .description {
+    display: none; /* Initially hide the description */
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    top: 100%; /* Position below the container */
+    left: 50%; /* Center horizontally */
+    width: 200px;
+    transform: translateX(-60%);
+    background-color: rgba(10, 10, 7, 0.395);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+  }
+  
+  .h1-container:hover .description {
+    display: block; /* Show the description when container is hovered */
+  }
+  .gif{
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    
+    right: 355px;
+    
+  }
+  #sun{
+    margin-top: -350px;
+    transform: rotateZ(90deg);
+    filter: drop-shadow(10px 10px 100px rgb(224, 150, 39));
+  }
+  #cloud1, #cloud2,#cloud3{
+    position: fixed;
+
+  }
+  #cloud1{
+    right: 100px;
+    height: 200px;
+    top: 600px;
+    filter: drop-shadow(0px 10px 10px rgb(255, 255, 255));
+  }
+  #cloud2{
+    right: 1500px;
+    height: 300px;
+    top: 50px;
+    transform: rotateZ(360deg);
+    filter: drop-shadow(0px 10px 100px rgb(242, 255, 57));
+  }
+  #cloud3{
+    right: 500px;
+    height: 300px;
+    top: 500px;
+    transform: rotateZ(110deg);
+  }
+  .flipcard{
+    margin-top: -800px;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    transition:all 0.5s ease;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .flipcard #fliptext{
+    filter: drop-shadow(0px 10px 5px rgb(14, 10, 10));
+    color: rgb(0, 0, 0);
+    font-size: large;
+    margin-top: 85px;
+  }
+  .frontcard{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background: rgb(214, 183, 183);
+    opacity: 100;
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0px 0px 30px rgb(255, 255, 255));
+    border-radius: 5dvh;
+  }
+  .backcard{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin-left:-100px;
+  }
+  #bc1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('arduino1.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('arduino2.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  
+  
+  #bc3{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('arduino3.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc4{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('ig1.png');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc5{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('ig2.png');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc6{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('ig3.png');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc7{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('website1.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc8{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('website2.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  #bc9{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    backface-visibility: hidden;
+    background-image: url('website3.jpg');
+    background-size: 100% 100%; /* Set background size to cover the entire container */
+    background-repeat: no-repeat;
+    color: darkgray;
+    filter: drop-shadow(0px 0px 30px black);
+    transform: rotateY(180deg);
+    z-index: 3;
+  }
+  .flipcard:hover{
+    transform: rotateY(180deg );
+  }
+
+  .flipcard-container{
+    display: grid;
+    margin-top: 500px;
+    grid-template-columns: repeat(4, auto); /* Adjust column size */
+    justify-items: center;
+    align-items:center;
+    justify-content:center;
+    grid-column-gap: 300px;
+    align-content: space-between;
+
+}
+#btn1 {
+  background-image: url('earth.gif');
+  padding: 60px;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin-top: 100px;
+  margin-left: 200px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(35, 153, 153));
+}
+
+.description {
+  display: none;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  position: absolute;
+  top: 100%;
+  left: 200px;
+  height: fit-content;
+  width: 150px;
+  transform: translate(-50%, 10px);
+  background-color: rgba(10, 10, 7, 0.395);
+  color: white;
+  padding: 100px;
+  border-radius: 20px;
+  transition: display 0.3s ease; /* Add smooth transition */
+}
+
+#btn1:hover .description {
+  display: block;
+  background-image: url('arduino1.jpg');
+  background-size: 100% 100%;
+  margin-top: -200px;
+  margin-left: -400px;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+}
+#btn2 {
+  background-image: url('planet1.gif');
+  background-size: 100% 100%;
+  height: 300px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 400px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(245, 153, 47));
+}
+#btn2:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('arduino2.jpg');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+}
+#btn3 {
+  background-image: url('planet3.gif');
+  background-size: 100% 100%;
+  height: 300px;
+  width: 300px;
+  margin-top: -500px;
+  margin-left: 900px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(245, 215, 47));
+}
+#btn3:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('arduino3.jpg');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(245, 215, 47));
+}
+#btn4 {
+  background-image: url('meteor.gif');
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  margin-top: -200px;
+  margin-left: 900px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn4:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('ig1.png');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn5 {
+  background-image: url('meteor2.gif');
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  margin-top: -200px;
+  margin-left: 200px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn5:hover .description {
+  display: block;
+  margin-top: 10px;
+  margin-left: -200px;
+  background-image: url('ig2.png');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn6 {
+  background-image: url('meteor3.gif');
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  margin-top: 1px;
+  margin-left: 500px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn6:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('ig3.png');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn7 {
+  background-image: url('uni1.gif');
+  position:absolute;
+  background-size: 100% 100%;
+  height: 300px;
+  width: 300px;
+  margin-top: -50px;
+  margin-left: 200px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn7:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('website1.jpg');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn8 {
+  background-image: url('uni2.gif');
+  background-size: 100% 100%;
+  height: 200px;
+  width: 200px;
+  margin-top: -200px;
+  margin-left: 700px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn8:hover .description {
+  display: block;
+  margin-top: -100px;
+  background-image: url('website2.jpg');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn9 {
+  background-image: url('uni3.gif');
+  background-size: 100% 100%;
+  height: 400px;
+  width: 400px;
+  margin-top: 1px;
+  margin-left: 500px;
+  position: relative;
+  transition: ease-in-out;
+  transform: transform();
+  transform: rotateX(180deg);
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+#btn9:hover .description {
+  display: block;
+  margin-top: -300px;
+  margin-left: 300px;
+  background-image: url('website3.jpg');
+  background-size: 100% 100%;
+  transform: translate(-50%, -10px) ease;
+  transition: ease-in-out;
+  filter: drop-shadow(0 0 10px rgb(68, 68, 64));
+}
+.center1-container {
+  display: flex;
+  margin-right: -400px;
+  flex-direction: column;
+  align-items: center;
+  animation: transitionIn 0.75s;
+  padding-top: 0 !important; /* Remove padding on top */
+}
+.center2-container {
+  display: flex;
+  margin-right: 1600px;
+  flex-direction: column;
+  align-items: center;
+  animation: transitionIn 0.75s;
+  padding-top: 0 !important; /* Remove padding on top */
+}
+.center3-container {
+  display: flex;
+  margin-right: 1600px;
+  flex-direction: column;
+  align-items: center;
+  animation: transitionIn 0.75s;
+  padding-top: 0 !important; /* Remove padding on top */
+}
+#planetext1{
+  position: absolute;
+  font-size: 90px;
+  color: white;
+  margin-left: 1200px;
+  margin-top: 30px;
+  rotate: 30deg;
+  filter: drop-shadow(0px 0px 70px white);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-indent: 100px;
+}
+#planetext2{
+  position: absolute;
+  font-size: 90px;
+  color: white;
+  margin-left: 200px;
+  margin-top: 30px;
+  rotate: 350deg;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  filter: drop-shadow(0px 0px 70px rgb(252, 250, 149));
+}
+
+#planetext3{
+  position: absolute;
+  font-size: 90px;
+  color: white;
+  margin-left: 200px;
+  margin-top: 600px;
+  rotate: 30deg;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  filter: drop-shadow(0px 0px 70px rgb(134, 236, 231));
+}
+.navbar ul h1{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#port{
+  text-align: center;
+   font-size: 30px;
+   color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     position: absolute;
+      left: 50%;
+       transform: translateX(-50%);
+}
+#cj{
+  text-align:right;
+   font-size: 30px;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  margin-left: 20px;
+  color: white;
+}
+#game{
+  text-align: center;
+  position: absolute;
+  font-size: 50px;
+  text-shadow: 2px 2px 5px rgba(57, 255, 39, 0.979),5px 5px 70px rgba(255,255,255,0.5);
+  color: rgb(255, 250, 250);
+  margin-top: 20%;
+  margin-left: 36%;
+}
+#game1{
+ text-align: center; font-size: 50px;text-shadow: 2px 2px 5px rgba(255, 251, 19, 0.952),
+5px 5px 70px rgba(255,255,255,0.5);color: rgb(255, 255, 255);margin-top: 50px;
+}
+#game2{
+  text-align: center; font-size: 50px;text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.952),
+                5px 5px 70px rgba(255,255,255,0.5);color: rgb(255, 255, 255);margin-top: 400px;position: absolute;left: 36%;
+}
+#pic{
+  z-index: 3;
+}
+#con{
+  text-align: center;
+  font-size: 50px;
+  mix-blend-mode:darken;
+  font-family:monospace;
+  color: #000;
+}
+#profile{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3),5px 5px 70px rgba(255,255,255,0.5);
+  color: rgb(255, 255, 255);
+}

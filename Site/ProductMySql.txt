@@ -1,0 +1,86 @@
+import tkinter
+from tkinter import *
+from tkinter import messagebox
+import customtkinter
+from PIL import Image
+import mysql.connector
+from mysql.connector import Error
+
+customtkinter.set_appearance_mode("System")
+customtkinter.set_default_color_theme("blue")
+
+window = customtkinter.CTk()
+window.geometry("720x480")
+window.title("Inventory")
+
+
+def submit():
+    product = entryProduct.get()
+    price = entryPrice.get()
+    quantity = entryQuantity.get()
+
+    try:
+        con = mysql.connector.connect(host="localhost", database="db_productss", user="root", password="")
+        query = "INSERT INTO tbl_product (NAME, PRICE, QUANTITY) VALUES ('" + product + "', '" + price + "', '" + quantity + "')"
+        cur = con.cursor()
+        cur.execute(query)
+        con.commit()
+        cur.close()
+    except Error as error:
+        messagebox.showerror(title="Error", message=error)
+    finally:
+        if messagebox.askokcancel(title="Message",
+                                  message="Successfully Added to the Database: \n Do you want to add another product?"):
+            print("Sige lagay ka ulit")
+            entryProduct.delete(0, END)
+            entryPrice.delete(0, END)
+            entryQuantity.delete(0, END)
+        else:
+            con.close()
+            messagebox.showinfo(title="Message", message="MySql Conncetion is now Closed")
+            entryProduct.delete(0, END)
+            entryPrice.delete(0, END)
+            entryQuantity.delete(0, END)
+
+
+def clear():
+    entryProduct.delete(0, END)
+    entryPrice.delete(0, END)
+    entryQuantity.delete(0, END)
+
+
+img1 = customtkinter.CTkImage(Image.open("background.png"), size=(720, 480))
+label1 = customtkinter.CTkLabel(window, image=img1)
+label1.pack()
+
+frame = customtkinter.CTkFrame(label1, width=500, height=440, corner_radius=15)
+frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+label2 = customtkinter.CTkLabel(frame, text="Entering Product", font=("Century Gothic", 20))
+label2.place(x=170, y=25)
+
+Name = customtkinter.CTkLabel(frame, text="Product Name", font=("Century Gothic", 20))
+Name.place(x=90, y=70)
+entryProduct = customtkinter.CTkEntry(frame, width=310, placeholder_text="Enter Product name")
+entryProduct.place(x=90, y=110)
+
+Price = customtkinter.CTkLabel(frame, text="Product Price", font=("Century Gothic", 20))
+Price.place(x=90, y=150)
+entryPrice = customtkinter.CTkEntry(frame, width=310, placeholder_text="Enter Product price")
+entryPrice.place(x=90, y=190)
+
+Quantity = customtkinter.CTkLabel(frame, text="Product Quantity", font=("Century Gothic", 20))
+Quantity.place(x=90, y=230)
+entryQuantity = customtkinter.CTkEntry(frame, width=310, placeholder_text="Enter Product quantity")
+entryQuantity.place(x=90, y=270)
+
+Submit = customtkinter.CTkImage(Image.open("add.png"))
+Clear = customtkinter.CTkImage(Image.open("eraser.png"))
+
+btnSubmit = customtkinter.CTkButton(frame, width=150, text="Submit", corner_radius=6, image=Submit, compound="left", command=submit)
+btnSubmit.place(x=90, y=320)
+
+btnClear = customtkinter.CTkButton(frame, width=150, text="Clear", corner_radius=6, image=Clear, compound="left", command=clear)
+btnClear.place(x=250, y=320)
+
+window.mainloop()
